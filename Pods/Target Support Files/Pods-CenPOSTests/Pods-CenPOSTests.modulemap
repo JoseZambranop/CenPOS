@@ -1,0 +1,6 @@
+framework module Pods_CenPOSTests {
+  umbrella header "Pods-CenPOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

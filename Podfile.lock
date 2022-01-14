@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (5.2.2)
+  - DropDown (2.3.13)
+  - SwiftLint (0.35.0)
+  - TextFieldEffects (1.6.0)
+  - Validator (3.2.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2.2)
+  - DropDown (~> 2.3.2)
+  - SwiftLint (~> 0.35.0)
+  - TextFieldEffects (~> 1.6.0)
+  - Validator (~> 3.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DropDown
+    - SwiftLint
+    - TextFieldEffects
+    - Validator
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+  Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
+
+PODFILE CHECKSUM: 01edf55f05e3175dd8266bb452c59343157fc7ed
+
+COCOAPODS: 1.11.2

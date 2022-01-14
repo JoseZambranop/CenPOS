@@ -1,0 +1,6 @@
+framework module Pods_CenPOS {
+  umbrella header "Pods-CenPOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
