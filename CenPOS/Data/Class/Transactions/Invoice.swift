@@ -6,52 +6,33 @@
 //
 
 import Foundation
-public struct Invoice: Codable {
 
-    public var amount: Double?
-    // public var refundedAmount: Double?
-    public var originalAmount: Double?
-    public var currencyCode: String?
-    public var invoiceNumber: String?
-    // public var purchaseOrderNumber: String?
-    public var products: [InvoiceProduct]?
-    public var additionalAmounts: [AdditionalAmount]?
-   // public var carRental: CarRentalData?
-   //  public var lodging: LodgingData?
-  //  public var additionalInformation: [AdditionalInformationField]?
-   //  public var footerNote: String?
-   // public var taxVoucherNumber: String?
-    // public var promoCode: String?
+struct Invoice: Codable {
 
-    public init(
-        amount: Double? = nil,
-        // refundedAmount: Double? = nil,
-        originalAmount: Double? = nil,
-        currencyCode: String? = nil,
-        invoiceNumber: String? = nil,
-        // purchaseOrderNumber: String? = nil,
-        products: [InvoiceProduct]? = nil,
-        additionalAmounts: [AdditionalAmount]? = nil
-        // carRental: CarRentalData? = nil,
-        // lodging: LodgingData? = nil,
-        // additionalInformation: [AdditionalInformationField]? = nil,
-        // footerNote: String? = nil,
-        // taxVoucherNumber: String? = nil,
-        // promoCode: String? = nil
-    ) {
-        self.amount = amount
-        // self.refundedAmount = refundedAmount
-        self.originalAmount = originalAmount
-        self.currencyCode = currencyCode
-        self.invoiceNumber = invoiceNumber
-        // self.purchaseOrderNumber = purchaseOrderNumber
-        self.products = products
-        self.additionalAmounts = additionalAmounts
-        // self.carRental = carRental
-        // self.lodging = lodging
-        // self.additionalInformation = additionalInformation
-        // self.footerNote = footerNote
-        // self.taxVoucherNumber = taxVoucherNumber
-        // self.promoCode = promoCode
+    let amount: Double?
+    let originalAmount: Double?
+    let currencyCode: String?
+    let invoiceNumber: String?
+    let products: [String]?
+    let additionalAmounts: [String]?
+
+    enum CodingKeys: String, CodingKey {
+        case amount = "amount"
+        case originalAmount = "originalAmount"
+        case currencyCode = "currencyCode"
+        case invoiceNumber = "invoiceNumber"
+        case products = "products"
+        case additionalAmounts = "additionalAmounts"
     }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        amount = try values.decodeIfPresent(Double.self, forKey: .amount)
+        originalAmount = try values.decodeIfPresent(Double.self, forKey: .originalAmount)
+        currencyCode = try values.decodeIfPresent(String.self, forKey: .currencyCode)
+        invoiceNumber = try values.decodeIfPresent(String.self, forKey: .invoiceNumber)
+        products = try values.decodeIfPresent([String].self, forKey: .products)
+        additionalAmounts = try values.decodeIfPresent([String].self, forKey: .additionalAmounts)
+    }
+
 }

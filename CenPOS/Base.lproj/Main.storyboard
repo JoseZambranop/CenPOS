@@ -1780,6 +1780,7 @@
                         <outlet property="btnActionSubmit" destination="DRy-zC-TJ2" id="NU4-Yf-qWk"/>
                         <outlet property="lblDateTransactions" destination="3iX-wS-caT" id="sbM-qf-LIu"/>
                         <outlet property="lblTransactionsType" destination="b02-5O-NHS" id="1Uh-Q1-meI"/>
+                        <outlet property="tableViewTransactions" destination="NYt-vt-1DK" id="Ctl-hh-pfD"/>
                         <outlet property="vDateTransactions" destination="Mcg-Tm-klZ" id="yer-ol-mUo"/>
                         <outlet property="vTransactionsType" destination="1gm-LV-KRj" id="bjl-N8-wVQ"/>
                     </connections>
@@ -1814,43 +1815,43 @@
     </scenes>
     <designables>
         <designable name="0WS-0B-Q5S">
-            <size key="intrinsicContentSize" width="77" height="34"/>
+            <size key="intrinsicContentSize" width="91" height="34"/>
         </designable>
         <designable name="83x-vk-sjg">
-            <size key="intrinsicContentSize" width="77" height="34"/>
+            <size key="intrinsicContentSize" width="91" height="34"/>
         </designable>
         <designable name="IHn-wV-KaE">
-            <size key="intrinsicContentSize" width="69.5" height="34"/>
+            <size key="intrinsicContentSize" width="83.5" height="34"/>
         </designable>
         <designable name="RgN-fz-No7">
-            <size key="intrinsicContentSize" width="86" height="34"/>
+            <size key="intrinsicContentSize" width="100" height="34"/>
         </designable>
         <designable name="aGK-H6-q4q">
-            <size key="intrinsicContentSize" width="130.5" height="34"/>
+            <size key="intrinsicContentSize" width="144.5" height="34"/>
         </designable>
         <designable name="ajq-g3-vRA">
-            <size key="intrinsicContentSize" width="127.5" height="34"/>
+            <size key="intrinsicContentSize" width="141.5" height="34"/>
         </designable>
         <designable name="iaO-1D-y1A">
-            <size key="intrinsicContentSize" width="123" height="34"/>
+            <size key="intrinsicContentSize" width="137" height="34"/>
         </designable>
         <designable name="qyK-Dz-2bL">
-            <size key="intrinsicContentSize" width="94.5" height="34"/>
+            <size key="intrinsicContentSize" width="108.5" height="34"/>
         </designable>
         <designable name="s6Y-7v-OD0">
-            <size key="intrinsicContentSize" width="58.5" height="34"/>
+            <size key="intrinsicContentSize" width="72.5" height="34"/>
         </designable>
         <designable name="u36-iX-gy6">
-            <size key="intrinsicContentSize" width="113.5" height="34"/>
+            <size key="intrinsicContentSize" width="127.5" height="34"/>
         </designable>
         <designable name="xTB-eV-ocK">
-            <size key="intrinsicContentSize" width="85" height="34"/>
+            <size key="intrinsicContentSize" width="99" height="34"/>
         </designable>
         <designable name="zVd-Nj-zXR">
-            <size key="intrinsicContentSize" width="54" height="34"/>
+            <size key="intrinsicContentSize" width="68" height="34"/>
         </designable>
         <designable name="zYu-xp-7i8">
-            <size key="intrinsicContentSize" width="72.5" height="34"/>
+            <size key="intrinsicContentSize" width="86.5" height="34"/>
         </designable>
     </designables>
     <resources>

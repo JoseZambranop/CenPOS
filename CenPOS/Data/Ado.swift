@@ -10,6 +10,13 @@ import Foundation
 
 final class Ado{
     static let shared = Ado()
+    static var shared1: Ado = {
+        let instance = Ado()
+        // ... configure the instance
+        // ...
+        return instance
+    }()
+    var typetrans = [String]()
     private let kBaseUrl = "https://ww3.cenpos.net/api/merchants/"
     private let kStatusOk = 200...299
     var authorization: String = ""
@@ -22,13 +29,10 @@ final class Ado{
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                if error == nil &&  data != nil {
-                    let newsTrans = try? JSONDecoder().decode(Transaction.self, from: data)
-                    // no se guarda la transactions
-                    print(newsTrans)
-                    print(newsTrans?.transactionType)
-                }
+            if let validData = data, error == nil {
+                let newsTrans = try! JSONDecoder().decode([Transaction].self, from: validData)
+                let transa = newsTrans.
+                print(newsTrans)
             }
         }.resume()
         
@@ -42,13 +46,18 @@ final class Ado{
               request.addValue("application/json", forHTTPHeaderField: "Accept")
               request.addValue("application/json", forHTTPHeaderField: "Content-Type")
               URLSession.shared.dataTask(with: request) { data, response, error in
-                  if let data = data {
+                  if let validData = data, error == nil {
+                      let newsUser = try! JSONDecoder().decode(LoginResponse.self, from: validData)
+                      print(newsUser.user?.password)
+                      print(newsUser.user?.name)
+                  }
+                  /*if let data = data {
                       if error == nil &&  data != nil {
                           let newsFeed = try? JSONDecoder().decode(LoginResponse.self, from: data)
                           print(newsFeed?.user?.password)
                           print(newsFeed?.user?.name)
                       }
-                  }
+                  }*/
               }.resume()
           }
      static func encodeBase64Credentials(user: String, password: String) -> String {

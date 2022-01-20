@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" rowHeight="165" id="KGk-i7-Jjw" customClass="MyTransactionTableViewCell" customModule="CenPOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="407" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ReferenceNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-jZ-VqV">
+                        <rect key="frame" x="30" y="21" width="125" height="19"/>
+                        <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgX-vL-1oq">
+                        <rect key="frame" x="30" y="50" width="102.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6x-OG-bkf">
+                        <rect key="frame" x="30" y="81" width="60" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNJ-Xn-fbO">
+                        <rect key="frame" x="30" y="112" width="75" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H78-Tj-Oyr">
+                        <rect key="frame" x="330.5" y="21" width="46.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJX-fR-y0s">
+                        <rect key="frame" x="330.5" y="52" width="46.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-W8-o4w">
+                        <rect key="frame" x="308" y="83" width="69" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIP-a0-Skv">
+                        <rect key="frame" x="303" y="114" width="74" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kgX-vL-1oq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="2Rj-N1-JTC"/>
+                    <constraint firstItem="JNJ-Xn-fbO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="5g0-r0-niE"/>
+                    <constraint firstItem="nnA-W8-o4w" firstAttribute="top" secondItem="uJX-fR-y0s" secondAttribute="bottom" constant="10" id="6UR-y0-e65"/>
+                    <constraint firstItem="Tbo-jZ-VqV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="6cv-Q3-G3c"/>
+                    <constraint firstItem="uJX-fR-y0s" firstAttribute="top" secondItem="H78-Tj-Oyr" secondAttribute="bottom" constant="10" id="ETp-Pn-MoX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="H78-Tj-Oyr" secondAttribute="trailing" constant="10" id="KuO-NC-hza"/>
+                    <constraint firstItem="t6x-OG-bkf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="NK7-Ok-sbo"/>
+                    <constraint firstItem="Tbo-jZ-VqV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="be5-8x-dU8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nnA-W8-o4w" secondAttribute="trailing" constant="10" id="cvs-23-FE6"/>
+                    <constraint firstItem="t6x-OG-bkf" firstAttribute="top" secondItem="kgX-vL-1oq" secondAttribute="bottom" constant="10" id="hOp-uH-t67"/>
+                    <constraint firstItem="H78-Tj-Oyr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="ie1-c9-wvY"/>
+                    <constraint firstItem="kgX-vL-1oq" firstAttribute="top" secondItem="Tbo-jZ-VqV" secondAttribute="bottom" constant="10" id="nut-31-TlA"/>
+                    <constraint firstItem="JNJ-Xn-fbO" firstAttribute="top" secondItem="t6x-OG-bkf" secondAttribute="bottom" constant="10" id="sU2-9I-3vF"/>
+                    <constraint firstItem="HIP-a0-Skv" firstAttribute="top" secondItem="nnA-W8-o4w" secondAttribute="bottom" constant="10" id="uxf-Ai-PwD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HIP-a0-Skv" secondAttribute="trailing" constant="10" id="xJj-cO-uWQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uJX-fR-y0s" secondAttribute="trailing" constant="10" id="xmD-qt-zYX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblAmount" destination="t6x-OG-bkf" id="qJC-aA-HUb"/>
+                <outlet property="lblApproved" destination="HIP-a0-Skv" id="CW7-eA-VUk"/>
+                <outlet property="lblCantidad" destination="nnA-W8-o4w" id="uVI-mV-Iir"/>
+                <outlet property="lblCardNumber" destination="kgX-vL-1oq" id="uBQ-1t-ycT"/>
+                <outlet property="lblCount" destination="uJX-fR-y0s" id="QcD-HP-P4E"/>
+                <outlet property="lblFecha" destination="H78-Tj-Oyr" id="435-WH-tqg"/>
+                <outlet property="lblReferenceNumber" destination="Tbo-jZ-VqV" id="hbe-g1-Cm4"/>
+                <outlet property="lblResponse" destination="JNJ-Xn-fbO" id="6he-oG-BTU"/>
+            </connections>
+            <point key="canvasLocation" x="210.86956521739131" y="45.200892857142854"/>
+        </tableViewCell>
+    </objects>
+</document>

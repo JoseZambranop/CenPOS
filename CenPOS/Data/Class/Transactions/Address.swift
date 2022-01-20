@@ -6,25 +6,21 @@
 //
 
 import Foundation
-public struct Address: Codable {
 
-    public var streetAddress: String?
-    // public var city: String?
-    // public var state: String?
-    public var zipCode: String?
-    // public var country: Country?
+struct Address: Codable {
 
-    public init(
-        streetAddress: String? = nil,
-        // city: String? = nil,
-        // state: String? = nil,
-        zipCode: String? = nil
-        // country: Country? = nil
-    ) {
-        self.streetAddress = streetAddress
-        // self.city = city
-       // self.state = state
-        self.zipCode = zipCode
-        // self.country = country
+    let streetAddress: String?
+    let zipCode: String?
+
+    enum CodingKeys: String, CodingKey {
+        case streetAddress = "streetAddress"
+        case zipCode = "zipCode"
     }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        streetAddress = try values.decodeIfPresent(String.self, forKey: .streetAddress)
+        zipCode = try values.decodeIfPresent(String.self, forKey: .zipCode)
+    }
+
 }

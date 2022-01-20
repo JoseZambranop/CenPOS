@@ -6,16 +6,21 @@
 //
 
 import Foundation
-public struct ParameterValidationResult: Codable {
 
-    public var name: String?
-    public var result: String?
+struct ParameterValidationResults: Codable {
 
-    public init(
-        name: String? = nil,
-        result: String? = nil
-    ) {
-        self.name = name
-        self.result = result
+    let name: String?
+    let result: String?
+
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case result = "result"
     }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+        result = try values.decodeIfPresent(String.self, forKey: .result)
+    }
+
 }

@@ -6,31 +6,27 @@
 //
 
 import Foundation
-public struct Customer: Codable {
 
-    public var customerCode: String?
-    public var emailAddress: String?
-    // public var phone: String?
-    public var address: Address?
-    public var name: String?
-    // public var birthday: String?
-    // public var driversNumber: String?
+struct Customer: Codable {
 
-    public init(
-        customerCode: String? = nil,
-        emailAddress: String? = nil,
-        // phone: String? = nil,
-        address: Address? = nil,
-        name: String? = nil
-        // birthday: String? = nil,
-        // driversNumber: String? = nil
-    ) {
-        self.customerCode = customerCode
-        self.emailAddress = emailAddress
-        // self.phone = phone
-        self.address = address
-        self.name = name
-        // self.birthday = birthday
-        // self.driversNumber = driversNumber
+    let customerCode: String?
+    let emailAddress: String?
+    let address: Address?
+    let name: String?
+
+    enum CodingKeys: String, CodingKey {
+        case customerCode = "customerCode"
+        case emailAddress = "emailAddress"
+        case address = "address"
+        case name = "name"
     }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        customerCode = try values.decodeIfPresent(String.self, forKey: .customerCode)
+        emailAddress = try values.decodeIfPresent(String.self, forKey: .emailAddress)
+        address = try values.decodeIfPresent(Address.self, forKey: .address)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+    }
+
 }
